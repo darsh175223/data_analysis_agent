@@ -17,6 +17,8 @@ GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
+
+
 def get_required_tools(query, available_tools):
     prompt = f"""As an expert data analyst, given the following query and list of available tools, 
     precisely identify which tools would be necessary to detect the root cause of any anomaly mentioned in the query.
